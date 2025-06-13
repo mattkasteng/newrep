@@ -2,26 +2,55 @@ import React from "react";
 
 /**
  * ProjectCard - Card for project showcase with hover and glassmorphism.
- * Props: title, description, link
+ * Props: title, description, link, technologies, image
  */
-type ProjectCardProps = {
+interface ProjectCardProps {
   title: string;
   description: string;
   link?: string;
-};
+  technologies?: string[];
+  image?: string;
+  showImage?: boolean;
+}
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link }) => (
+const ProjectCard: React.FC<ProjectCardProps> = ({ 
+  title, 
+  description, 
+  link, 
+  technologies,
+  image,
+  showImage = false
+}) => (
   <div className="glass card-hover rounded-2xl p-6 flex flex-col animate-fade-in border-2 border-transparent hover:border-gradient-to-r hover:from-blue-400 hover:to-pink-400 transition-all">
+    {showImage && image && (
+      <div className="mb-4 aspect-video overflow-hidden rounded-lg">
+        <img 
+          src={image} 
+          alt={title}
+          className="w-full h-full object-cover"
+        />
+      </div>
+    )}
     <h3 className="text-xl font-semibold mb-2 text-blue-700 dark:text-pink-400">
       {title}
     </h3>
     <p className="text-gray-700 dark:text-gray-300 mb-4 flex-1">{description}</p>
+    {technologies && (
+      <div className="flex flex-wrap gap-2 mb-4">
+        {technologies.map((tech) => (
+          <span 
+            key={tech}
+            className="px-2 py-1 text-sm bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+    )}
     {link && (
       <a
         href={link}
         className="inline-block mt-auto text-blue-600 dark:text-pink-400 font-medium btn-animated"
-        target="_blank"
-        rel="noopener noreferrer"
       >
         Learn more
       </a>

@@ -1,53 +1,51 @@
 import React from "react";
+import ProjectCard from "@/app/components/ProjectCard";
 
 const projects = [
   {
-    title: "AI-Driven Financial Dashboard",
-    description:
-      "Developed an interactive dashboard for a Tier 1 Bank's Data & Analytics department, integrating automated reporting and real-time analytics.",
-    link: "#",
+    id: "project1",
+    title: "AI-Powered Data Analysis Platform",
+    description: "A comprehensive platform for analyzing large datasets using machine learning algorithms. Features include real-time data processing, predictive analytics, and interactive visualizations.",
+    link: "/projects/ai-data-platform",
+    technologies: ["Python", "TensorFlow", "React", "Docker"]
   },
   {
-    title: "Strategic Operations Automation",
-    description:
-      "Led the automation of tools in Jira and QlikSense, reducing operational costs and improving governance efficiency for a global consulting firm.",
-    link: "#",
+    id: "project2",
+    title: "E-commerce Optimization System",
+    description: "An intelligent system that optimizes e-commerce operations using data-driven insights. Includes inventory management, pricing optimization, and customer behavior analysis.",
+    link: "/projects/ecommerce-optimization",
+    technologies: ["Node.js", "MongoDB", "AWS", "React"]
   },
   {
-    title: "International Trade Analysis Platform",
-    description:
-      "Built a data-driven platform to support trade negotiations and policy analysis for the World Trade Organization.",
-    link: "#",
-  },
+    id: "project3",
+    title: "Healthcare Analytics Dashboard",
+    description: "A real-time dashboard for healthcare providers to monitor patient data and treatment outcomes. Features secure data handling and HIPAA compliance.",
+    link: "/projects/healthcare-dashboard",
+    technologies: ["React", "TypeScript", "Python", "PostgreSQL"]
+  }
 ];
 
 const ProjectsSection: React.FC = () => {
   return (
-    <section id="projects" className="w-full py-20 flex flex-col items-center bg-transparent parallax" style={{background: "linear-gradient(120deg, #fbc2eb 0%, #a5b4fc 100%)"}}>
+    <section id="projects" className="w-full py-20 flex flex-col items-center bg-transparent">
       <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Projects</h2>
-      <div className="grid gap-8 md:grid-cols-3 w-full max-w-5xl">
+      <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {projects.map((project) => (
-          <div
-            key={project.title}
-            className="glass card-hover rounded-2xl p-6 flex flex-col animate-fade-in"
-          >
-            <h3 className="text-xl font-semibold mb-2 text-blue-700 dark:text-pink-400">
-              {project.title}
-            </h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-4 flex-1">{project.description}</p>
-            {project.link && (
-              <a
-                href={project.link}
-                className="inline-block mt-auto text-blue-600 dark:text-pink-400 font-medium btn-animated"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Learn more
-              </a>
-            )}
-          </div>
+          <ProjectCard
+            key={project.id}
+            title={project.title}
+            description={project.description}
+            link={project.link}
+            technologies={project.technologies}
+          />
         ))}
       </div>
+      <a
+        href="/projects"
+        className="mt-12 px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-pink-500 text-white font-semibold shadow-lg btn-animated focus:outline-none focus:ring-2 focus:ring-pink-400"
+      >
+        View All Projects
+      </a>
     </section>
   );
 };
