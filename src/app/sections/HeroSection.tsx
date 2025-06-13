@@ -17,7 +17,7 @@ const HeroSection: React.FC = () => {
           Matteus Kasten Guimarães
         </h1>
         <h2 className="text-xl sm:text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-6">
-          Managing Partner @ Tropicalia (AI Consulting)
+          Managing Partner @ Tropicalia
         </h2>
         <p className="max-w-xl mx-auto text-lg text-gray-600 dark:text-gray-300 mb-8">
           I help organizations unlock value with AI, data, and strategy. Passionate about building impactful solutions at the intersection of technology and business.

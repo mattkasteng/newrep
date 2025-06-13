@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const experience = [
+const _experience = [
   {
     role: "Managing Partner",
     company: "Tropicalia (AI Consulting)",
@@ -47,7 +47,7 @@ const experience = [
   },
 ];
 
-const education = [
+const _education = [
   {
     degree: "MSc, Management",
     institution: "Imperial Business School",
