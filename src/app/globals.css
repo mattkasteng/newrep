@@ -20,7 +20,54 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 50%, #fbc2eb 100%);
+  color: #18181b;
+  font-family: var(--font-geist-sans), var(--font-geist-mono), ui-sans-serif, system-ui, sans-serif;
+}
+
+.dark body {
+  background: linear-gradient(135deg, #0a0a0a 0%, #232323 50%, #2d2a4a 100%);
+  color: #f3f4f6;
+}
+
+.glass {
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(12px) saturate(180%);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+.dark .glass {
+  background: rgba(24,24,27,0.7);
+  border: 1px solid rgba(30,41,59,0.3);
+}
+
+.card-hover {
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+}
+.card-hover:hover {
+  transform: translateY(-6px) scale(1.04) rotateZ(-0.5deg);
+  box-shadow: 0 12px 32px 0 rgba(31, 38, 135, 0.18), 0 2px 8px 0 rgba(0,0,0,0.08);
+}
+
+.btn-animated {
+  transition: background 0.3s, transform 0.2s;
+}
+.btn-animated:hover {
+  background: linear-gradient(90deg, #6366f1 0%, #ec4899 100%);
+  transform: scale(1.05) translateY(-2px);
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 640px) {
+  .glass {
+    border-radius: 1rem;
+    padding: 1.25rem;
+  }
 }
