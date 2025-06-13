@@ -60,8 +60,8 @@ const BlogSection: React.FC = () => {
             <p className="mb-4 text-gray-700 dark:text-gray-300">{_node.description}</p>
             <div className="mb-4">
               <ReactMarkdown components={{
-                h1: ({node, ...props}) => <h1 className="prose-h1" {...props} />, 
-                p: ({node, ...props}) => <p className="prose-p" {...props} />,
+                h1: ({...props}) => <h1 className="prose-h1" {...props} />, 
+                p: ({...props}) => <p className="prose-p" {...props} />,
               }}>{_node.content.slice(0, 200) + (_node.content.length > 200 ? "..." : "")}</ReactMarkdown>
             </div>
             <a href="#" className="btn-animated text-blue-600 dark:text-pink-400 font-medium">Read more</a>

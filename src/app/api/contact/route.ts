@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
       html: `<p><b>Name:</b> ${name}</p><p><b>Email:</b> ${email}</p><p><b>Message:</b><br/>${message.replace(/\n/g, "<br/>")}</p>`,
     });
     return NextResponse.json({ success: true });
-  } catch (_err) {
+  } catch {
     return NextResponse.json({ error: "Something went wrong." }, { status: 500 });
   }
 } 

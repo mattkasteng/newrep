@@ -48,8 +48,8 @@ const ContactForm: React.FC = () => {
       } else {
         setApiError(data.error || "Failed to send message.");
       }
-    } catch (_err) {
-      setApiError("Failed to send message.");
+    } catch {
+      setApiError("Something went wrong. Please try again later.");
     } finally {
       setLoading(false);
     }
