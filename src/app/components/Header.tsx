@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -19,15 +19,10 @@ const navLinks = [
 
 const Header: React.FC = () => {
   const pathname = usePathname();
-  const [hash, setHash] = useState("");
+  const [activeHash, setActiveHash] = useState<string>('');
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      setHash(window.location.hash);
-      const onHashChange = () => setHash(window.location.hash);
-      window.addEventListener("hashchange", onHashChange);
-      return () => window.removeEventListener("hashchange", onHashChange);
-    }
+    setActiveHash(window.location.hash);
   }, []);
 
   return (
@@ -52,9 +47,9 @@ const Header: React.FC = () => {
         </Link>
         <ul className="flex gap-4 sm:gap-8 text-base font-medium">
           {navLinks.map((link) => {
-            const isHashLink = link.href.startsWith("/#");
-            const isActive = pathname === link.href ||
-              (isHashLink && pathname === "/" && hash === link.href.replace("/", ""));
+            const isActive = pathname === link.href || 
+              (link.href.startsWith('/#') && pathname === '/' && activeHash === link.href.substring(1));
+            
             return (
               <li key={link.href}>
                 <Link

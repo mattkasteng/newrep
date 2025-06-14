@@ -12,7 +12,7 @@ const HeroSection: React.FC = () => {
       }}
     >
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-400/40 via-purple-400/30 to-pink-400/30 animate-gradient-x" />
-      <div className="glass max-w-2xl w-full mx-auto p-8 md:p-12 flex flex-col items-center shadow-2xl animate-fade-in">
+      <div className="glass glass-highlight glass-glow glass-reflection max-w-2xl w-full mx-auto p-8 md:p-12 flex flex-col items-center shadow-2xl animate-fade-in">
         <h1 className="text-4xl sm:text-6xl font-extrabold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent drop-shadow-lg mb-4 tracking-tight">
           Matteus Kasten Guimarães
         </h1>

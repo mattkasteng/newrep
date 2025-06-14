@@ -31,16 +31,37 @@ body {
 }
 
 .glass {
-  background: rgba(255,255,255,0.7);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
-  backdrop-filter: blur(12px) saturate(180%);
+  background: rgba(255,255,255,0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 1.5px 8px 0 rgba(255,255,255,0.12) inset;
+  backdrop-filter: blur(16px) saturate(180%);
   border-radius: 1.5rem;
-  border: 1px solid rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.22);
 }
 
 .dark .glass {
-  background: rgba(24,24,27,0.7);
-  border: 1px solid rgba(30,41,59,0.3);
+  background: rgba(24,24,27,0.55);
+  border: 1px solid rgba(30,41,59,0.32);
+}
+
+.glass-highlight {
+  background: linear-gradient(120deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.08) 100%);
+}
+
+.glass-glow {
+  box-shadow: 0 0 16px 2px rgba(99,102,241,0.10), 0 2px 8px 0 rgba(236,72,153,0.10);
+}
+
+.glass-reflection {
+  position: relative;
+}
+.glass-reflection::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 30%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.05) 100%);
+  border-radius: 1.5rem 1.5rem 0 0;
+  pointer-events: none;
 }
 
 .card-hover {

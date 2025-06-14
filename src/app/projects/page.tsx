@@ -8,7 +8,7 @@ const projects = [
     description: "A comprehensive platform for analyzing large datasets using machine learning algorithms. Features include real-time data processing, predictive analytics, and interactive visualizations.",
     link: "/projects/ai-data-platform",
     technologies: ["Python", "TensorFlow", "React", "Docker"],
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: "project2",
@@ -16,7 +16,7 @@ const projects = [
     description: "An intelligent system that optimizes e-commerce operations using data-driven insights. Includes inventory management, pricing optimization, and customer behavior analysis.",
     link: "/projects/ecommerce-optimization",
     technologies: ["Node.js", "MongoDB", "AWS", "React"],
-    image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: "project3",
@@ -24,7 +24,7 @@ const projects = [
     description: "A real-time dashboard for healthcare providers to monitor patient data and treatment outcomes. Features secure data handling and HIPAA compliance.",
     link: "/projects/healthcare-dashboard",
     technologies: ["React", "TypeScript", "Python", "PostgreSQL"],
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=800&q=80"
   }
 ];
 
@@ -44,7 +44,6 @@ export default function ProjectsPage() {
               link={project.link}
               technologies={project.technologies}
               image={project.image}
-              showImage={true}
             />
           ))}
         </div>

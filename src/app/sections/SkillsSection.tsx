@@ -27,7 +27,7 @@ const SkillsSection: React.FC = () => {
         {skills.map((skill) => (
           <div
             key={skill}
-            className="glass card-hover px-4 py-3 text-center text-gray-800 dark:text-gray-200 font-medium shadow animate-fade-in flex flex-col justify-center items-center h-24"
+            className="glass glass-highlight glass-glow glass-reflection card-hover px-4 py-3 text-center text-gray-800 dark:text-gray-200 font-medium shadow animate-fade-in flex items-center justify-center"
           >
             {skill}
           </div>

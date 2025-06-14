@@ -44,7 +44,7 @@ const BlogSection: React.FC = () => {
       <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Blog</h2>
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-3 gap-8">
         {posts.map((_node) => (
-          <div key={_node.slug} className="glass card-hover p-6 flex flex-col animate-fade-in">
+          <div key={_node.slug} className="glass glass-highlight glass-glow glass-reflection card-hover p-6 flex flex-col animate-fade-in">
             <div className="mb-4 rounded-xl overflow-hidden">
               <Image
                 src={_node.image}

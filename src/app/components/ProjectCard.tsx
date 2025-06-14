@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 /**
  * ProjectCard - Card for project showcase with hover and glassmorphism.
@@ -10,7 +11,6 @@ interface ProjectCardProps {
   link?: string;
   technologies?: string[];
   image?: string;
-  showImage?: boolean;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ 
@@ -18,16 +18,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   description, 
   link, 
   technologies,
-  image,
-  showImage = false
+  image 
 }) => (
-  <div className="glass card-hover rounded-2xl p-6 flex flex-col animate-fade-in border-2 border-transparent hover:border-gradient-to-r hover:from-blue-400 hover:to-pink-400 transition-all">
-    {showImage && image && (
-      <div className="mb-4 aspect-video overflow-hidden rounded-lg">
-        <img 
-          src={image} 
+  <div className="glass glass-highlight glass-glow glass-reflection card-hover rounded-2xl p-6 flex flex-col animate-fade-in border-2 border-transparent hover:border-gradient-to-r hover:from-blue-400 hover:to-pink-400 transition-all">
+    {image && (
+      <div className="mb-4 rounded-xl overflow-hidden">
+        <Image
+          src={image}
           alt={title}
-          className="w-full h-full object-cover"
+          width={800}
+          height={400}
+          className="w-full h-48 object-cover object-center rounded-xl"
         />
       </div>
     )}
