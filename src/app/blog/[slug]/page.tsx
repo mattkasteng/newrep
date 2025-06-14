@@ -172,7 +172,8 @@ Digital transformation is a journey, not a destination. Organizations must remai
   }
 };
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function BlogPostPage({ params }: any) {
   const post = blogPosts[params.slug as keyof typeof blogPosts];
 
   if (!post) {

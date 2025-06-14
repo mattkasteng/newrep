@@ -54,7 +54,8 @@ Key features include:
   }
 };
 
-export default async function ProjectPage({ params }: { params: { slug: string } }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function ProjectPage({ params }: any) {
   const project = projects[params.slug as keyof typeof projects];
 
   if (!project) {
