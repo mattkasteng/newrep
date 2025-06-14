@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -55,7 +54,7 @@ Key features include:
   }
 };
 
-export default function ProjectPage({ params }) {
+export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project = projects[params.slug as keyof typeof projects];
 
   if (!project) {
