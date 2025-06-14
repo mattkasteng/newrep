@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import ProjectCard from "@/app/components/ProjectCard";
 
 const projects = [
