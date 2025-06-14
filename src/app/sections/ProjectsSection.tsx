@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import ProjectCard from "@/app/components/ProjectCard";
 
 const projects = [
@@ -40,12 +41,12 @@ const ProjectsSection: React.FC = () => {
           />
         ))}
       </div>
-      <a
+      <Link
         href="/projects"
         className="mt-12 px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-pink-500 text-white font-semibold shadow-lg btn-animated focus:outline-none focus:ring-2 focus:ring-pink-400"
       >
         View All Projects
-      </a>
+      </Link>
     </section>
   );
 };
