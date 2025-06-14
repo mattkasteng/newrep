@@ -43,7 +43,7 @@ const Header: React.FC = () => {
           href="/"
           className="font-extrabold text-lg tracking-tight bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
         >
-          Matteus Kasten
+          MKG
         </Link>
         <ul className="flex gap-4 sm:gap-8 text-base font-medium">
           {navLinks.map((link) => {

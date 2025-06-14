@@ -64,7 +64,7 @@ const BlogSection: React.FC = () => {
                 p: ({...props}) => <p className="prose-p" {...props} />,
               }}>{_node.content.slice(0, 200) + (_node.content.length > 200 ? "..." : "")}</ReactMarkdown>
             </div>
-            <a href="#" className="btn-animated text-blue-600 dark:text-pink-400 font-medium">Read more</a>
+            <a href={`blog/${_node.slug}`} className="mx-auto mt-4 px-6 py-2 rounded-full bg-gradient-to-r from-blue-600 to-pink-500 text-white font-semibold shadow-lg btn-animated focus:outline-none focus:ring-2 focus:ring-pink-400 transition-transform duration-200 hover:scale-105" style={{ display: 'inline-block' }}>Read more</a>
           </div>
         ))}
       </div>

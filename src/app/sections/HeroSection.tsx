@@ -13,21 +13,15 @@ const HeroSection: React.FC = () => {
     >
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-400/40 via-purple-400/30 to-pink-400/30 animate-gradient-x" />
       <div className="glass glass-highlight glass-glow glass-reflection max-w-2xl w-full mx-auto p-8 md:p-12 flex flex-col items-center shadow-2xl animate-fade-in">
-        <h1 className="text-4xl sm:text-6xl font-extrabold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent drop-shadow-lg mb-4 tracking-tight">
+        <h1 className="text-4xl sm:text-6xl font-extrabold bg-gradient-to-r from-blue-700 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-xl mb-3 tracking-tight" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.18)' }}>
           Matteus Kasten Guimarães
         </h1>
-        <h2 className="text-xl sm:text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 drop-shadow-lg tracking-wide">
           Managing Partner @ Tropicalia
         </h2>
         <p className="max-w-xl mx-auto text-lg text-gray-600 dark:text-gray-300 mb-8">
           I help organizations unlock value with AI, data, and strategy. Passionate about building impactful solutions at the intersection of technology and business.
         </p>
-        <a
-          href="#about"
-          className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-pink-500 text-white font-semibold shadow-lg btn-animated focus:outline-none focus:ring-2 focus:ring-pink-400"
-        >
-          Learn more
-        </a>
       </div>
     </section>
   );

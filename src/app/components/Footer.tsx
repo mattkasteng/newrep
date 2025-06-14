@@ -26,22 +26,22 @@ const icons: Record<string, JSX.Element> = {
 };
 
   return (
-  <footer className="w-full py-6 mt-16 glass flex flex-col items-center">
-    <div className="flex gap-6 mb-2">
+  <footer className="w-full py-8 mt-16 bg-gray-900 flex flex-col items-center border-t border-gray-800">
+    <div className="flex gap-8 mb-3">
       {socials.map((s) => (
         <a
           key={s.label}
           href={s.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-pink-400 transition-colors duration-200"
+          className="text-white hover:text-blue-400 transition-colors duration-200 p-2 rounded-full bg-gray-800 hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-400"
           aria-label={s.label}
         >
-          {icons[s.icon]}
+          {React.cloneElement(icons[s.icon], { className: "w-7 h-7" })}
         </a>
       ))}
     </div>
-    <div className="text-sm text-center bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent font-semibold">
+    <div className="text-sm text-center text-white font-semibold tracking-wide">
       © {new Date().getFullYear()} Matteus Kasten Guimarães
     </div>
   </footer>

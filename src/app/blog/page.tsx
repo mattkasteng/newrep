@@ -77,7 +77,8 @@ export default function BlogPage() {
                   </p>
                   <Link 
                     href={`/blog/${post.slug}`}
-                    className="inline-block text-blue-600 dark:text-pink-400 font-medium btn-animated"
+                    className="mx-auto mt-4 px-6 py-2 rounded-full bg-gradient-to-r from-blue-600 to-pink-500 text-white font-semibold shadow-lg btn-animated focus:outline-none focus:ring-2 focus:ring-pink-400 transition-transform duration-200 hover:scale-105"
+                    style={{ display: 'inline-block' }}
                   >
                     Read more
                   </Link>
